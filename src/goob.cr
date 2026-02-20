@@ -1,4 +1,8 @@
+require "./rod/utils"
+
 module Goob
+  alias Message = ::Rod::Message
+
   class Observable(T)
     @subscribers = [] of Channel(T)
 
@@ -24,9 +28,5 @@ module Goob
 
   def self.new(ctx : Nil? = nil) : Observable(Message)
     Observable(Message).new
-  end
-
-  # Placeholder for Message type (should be defined elsewhere)
-  class Message
   end
 end

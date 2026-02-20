@@ -124,6 +124,8 @@ output.
 
 - Use `./temp` directory for temporary files created during testing or
   development
-- Never commit temporary files to git (they are already in `.gitignore`)
+- The `./temp` directory is in `.gitignore` and will not be committed
 - Clean up temporary files after use (the `make clean` rule removes `./temp`
   contents)
+- When downloading external dependencies for evaluation (e.g., shards, tools),
+  place them in `./temp` to avoid permission requests and keep project clean
